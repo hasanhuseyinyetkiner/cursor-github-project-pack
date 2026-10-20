@@ -9,4 +9,4 @@ Inspect the current repository, project plan, and the real state of code/tests. 
 5. Update README to describe only genuinely shipped behavior.
 6. At the end, give me a concise status table: complete, tested, incomplete, blocker; include exact command outputs and the next slice.
 
-Do not call an external paid service, deploy or push to GitHub without my permission. Continue implementation rather than just describing how it could be done.
+Do not call an external paid service, deploy, change repo visibility, create a LICENSE, or push to GitHub unless I explicitly re-authorize that action for this repo in this chat. Local edits (and local commits only if I ask) are OK. Continue implementation rather than just describing how it could be done.

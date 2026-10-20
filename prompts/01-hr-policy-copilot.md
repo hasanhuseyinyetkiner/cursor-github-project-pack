@@ -1,5 +1,7 @@
 # CURSOR AGENT PROMPT — HR POLICY COPILOT
 
+> **Historical development brief (greenfield).** For scaffolded repos prefer `prompts/antigravity/00-SYSTEM.md` + `01-hr-policy-copilot.md` and the product’s `docs/REVIEW_AMENDMENTS.md`. Do not destroy this file — keep it for provenance. **Git:** local edits OK; no push / no visibility change / no deploy unless the owner re-authorizes in-chat. **License:** do not create or silently choose `LICENSE` (pending owner decision). Local path: SQLite OK; Postgres via Compose/CI.
+
 You are a principal full-stack engineer, retrieval engineer, privacy-conscious AI engineer, and open-source maintainer. **Implement a complete, usable, polished GitHub portfolio product** named **HR Policy Copilot** in this repository. Do not merely provide an outline, screenshots, pseudo-code, or incomplete scaffolding. Write and run real files and commands, implement in testable phases, and correct errors you discover. Check `.cursor/rules/*.mdc` if present. If the repo is empty, create everything needed.
 
 ## Product concept
@@ -67,7 +69,7 @@ Create a premium **English** root `README.md`:
 - Quick Start commands VERIFIED in repository; exact `.env` vars and local URLs; 60-second demo steps with expected cited response.
 - Engineering deep dive: dense/BM25/RRF, chunking, document versions, abstention and prompt injection model.
 - Evaluation table containing only numbers truly measured, data licensing, privacy and honest limitations.
-- Docs and examples links, accurate repo tree, API example, development/test commands, contributing guide, selected license.
+- Docs and examples links, accurate repo tree, API example, development/test commands, contributing guide, and license status (`pending owner decision` unless the owner already chose a LICENSE — never invent one).
 - `docs/GITHUB_METADATA.md`: suggested description `Source-grounded HR policy assistant with hybrid RAG, versioned documents and verifiable citations.`; GitHub topics: `rag`, `llm`, `fastapi`, `qdrant`, `semantic-search`, `hr-tech`, `typescript`, `open-source`.
 
 ## Implementation sequence / exit criteria

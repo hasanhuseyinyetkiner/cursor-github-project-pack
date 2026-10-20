@@ -57,15 +57,15 @@ First-impression rules (researched 2026-10, GitHub Docs + current README practic
 flowchart LR
   U[Browser · React] -->|REST| A[FastAPI]
   A --> E[Domain engine]
-  A --> D[(PostgreSQL)]
+  A --> D[(SQLite local / PostgreSQL CI)]
 ```
 
-One paragraph walking through the diagram. Link to `docs/ARCHITECTURE.md`.
+One paragraph walking through the diagram. Link to `docs/ARCHITECTURE.md`. Distinguish **shipped** vs **roadmap**. Do not list optional extras (PM4Py, embeddings) as hard requirements unless required to run the demo.
 
 ## Quick start
 
 > [!NOTE]
-> State exactly which path was verified where (e.g. native path verified locally; Docker Compose verified in CI).
+> State exactly which path was verified where (e.g. native + SQLite verified locally; Docker Compose + PostgreSQL verified in CI).
 
 ```bash
 # exact, tested commands only

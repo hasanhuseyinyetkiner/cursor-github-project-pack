@@ -1,42 +1,50 @@
-<!-- Use this README in a PUBLIC repository named EXACTLY your GitHub username. Replace USERNAME, YOUR NAME, YOUR ROLE and only keep true claims/links. -->
+<!--
+Prepare for: https://github.com/hasanhuseyinyetkiner/hasanhuseyinyetkiner
+Agents: draft/edit locally only. Do NOT push to the profile repo or overwrite the live profile
+unless the owner explicitly re-authorizes that push in the current chat.
+Replace YOUR NAME / contact only with verified facts. Do not invent employers.
+Do NOT introduce employer names (including N&C S.p.A.) unless the owner supplies them.
+-->
 
-# Hey, I'm YOUR NAME 👋
+# Hey, I'm YOUR NAME
 
-**Software Developer | AI-powered products · Data Engineering · Optimization**
+**Embedded · C++/Qt · Systems · Cybersecurity · Backend · Applied AI**
 
-I build practical open-source tools that turn complex workplace problems into explainable, testable software. My focus is on the intersection of machine learning, data systems, algorithms, and product engineering.
+I build reliable software across systems and product layers: embedded and desktop (C++/Qt), backend services, security-minded engineering, and applied AI demos that stay explainable and testable.
 
 ## Featured work
 
-| Project | What it solves | Core stack |
-| --- | --- | --- |
-| [HR Policy Copilot](https://github.com/USERNAME/hr-policy-copilot) | Source-grounded HR document Q&A with retrieval and citations | FastAPI · RAG · Qdrant · React |
-| [Hiring Process Miner](https://github.com/USERNAME/hiring-process-miner) | Discovers bottlenecks in hiring event logs | PM4Py · Python · React |
-| [Workforce Optimizer](https://github.com/USERNAME/workforce-optimizer) | Builds explainable shift plans from scheduling constraints | OR-Tools · FastAPI · React |
-| [FairHire Audit](https://github.com/USERNAME/fairhire-audit) | Audits model performance and group-level disparities | Fairlearn · scikit-learn |
-| [SkillGraph](https://github.com/USERNAME/skillgraph) | Explores skills and internal career transitions | NetworkX · NLP · React |
+> **Publication status:** Links below may still be **private**. Until a repository is intentionally made public, treat it as *private — not yet published* and do not present it as an open-source showcase.
 
-> **Important:** Publish only links to repositories that actually exist. Remove unfinished projects from the Featured work table until publicly released.
+| Project | Status | What it demonstrates | Core stack |
+| --- | --- | --- | --- |
+| [HR Policy Copilot](https://github.com/hasanhuseyinyetkiner/hr-policy-copilot) | Private until publication | Grounded policy Q&A with citations / abstention | FastAPI · RAG · Qdrant · React |
+| [Hiring Process Miner](https://github.com/hasanhuseyinyetkiner/hiring-process-miner) | Private until publication | Event-log process analytics (pandas core; PM4Py optional) | FastAPI · pandas · React Flow |
+| [Workforce Optimizer](https://github.com/hasanhuseyinyetkiner/workforce-optimizer) | Private until publication | CP-SAT scheduling + independent validator + custom roster grid | OR-Tools · FastAPI · React |
+| [FairHire Audit](https://github.com/hasanhuseyinyetkiner/fairhire-audit) | Private until publication | Model quality + group disparity audits (no bias-free certificate) | Fairlearn · scikit-learn · React |
+| [SkillGraph](https://github.com/hasanhuseyinyetkiner/skillgraph) | Private until publication | Explainable skill graphs; embeddings optional / off by default | NetworkX · FastAPI · Cytoscape |
+
+After a repo goes public, change its **Status** cell to `Public` and keep the description honest (shipped vs roadmap).
 
 ## What I work with
 
-**Languages:** Python · TypeScript · SQL  
-**Backend & data:** FastAPI · PostgreSQL · Docker  
-**AI & algorithms:** NLP · RAG · scikit-learn · Constraint Optimization · Knowledge Graphs  
-**Frontend:** React · Vite · Tailwind CSS  
-**Engineering:** Pytest · GitHub Actions · REST APIs · CI/CD
+**Systems & embedded:** C · C++ · Qt · debugging · performance-minded code  
+**Backend:** Python · FastAPI · SQL · PostgreSQL / SQLite · Docker  
+**Cybersecurity mindset:** threat-aware defaults, secret hygiene, least privilege, honest limitation docs  
+**Applied AI:** RAG, classical ML metrics, knowledge graphs, optimization — with evaluation and human oversight  
+**Frontend (demo UIs):** TypeScript · React · Vite  
+**Engineering:** pytest · CI · reproducible demos · clear READMEs  
 
-## My engineering approach
+## Engineering approach
 
-- Build working products, not disconnected notebooks.
-- Document assumptions and limitations, not just happy paths.
-- Test core algorithms using reproducible sample data.
-- Design tools for explainability and human oversight.
+- Prefer working vertical slices over disconnected notebooks.
+- Document assumptions and limitations, not only happy paths.
+- Separate **shipped** from **planned**; never invent metrics or screenshots.
+- Keep consequential HR/employment decisions under human review.
 
 ## Contact
 
-- GitHub: [@USERNAME](https://github.com/USERNAME)
-- Portfolio: add a verified link only if you have one
-- Email: provide an email only if you want it public
+- GitHub: [@hasanhuseyinyetkiner](https://github.com/hasanhuseyinyetkiner)
+- Portfolio / email: add only verified public links the owner wants shown
 
-<!-- Optional: Only add real stats badges and contact links that load correctly. Avoid a wall of animated badges. -->
+<!-- Optional: real stats badges only. Avoid animated badge walls. -->

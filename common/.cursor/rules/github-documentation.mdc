@@ -6,7 +6,7 @@ alwaysApply: true
 # Repository documentation standards
 
 - README must be in **clear, professional English**, specific to the actual product. The goal is to let a stranger understand, run, evaluate, and trust the software in under five minutes.
-- Create root `README.md`, `docs/ARCHITECTURE.md`, `docs/DEMO.md`, `docs/SECURITY.md`, `docs/LIMITATIONS.md`, `docs/METRICS.md` (if applicable), `CONTRIBUTING.md`, `SECURITY.md`, `LICENSE` only after confirming licensing choice.
+- Create root `README.md`, `docs/ARCHITECTURE.md`, `docs/DEMO.md`, `docs/SECURITY.md`, `docs/LIMITATIONS.md`, `docs/METRICS.md` (if applicable), `CONTRIBUTING.md`, `SECURITY.md` as needed. **`LICENSE`:** three layers — (1) *historical/dev constraint* in REVIEW_AMENDMENTS: do not create `LICENSE` while building; (2) *release requirement* in RELEASE_CHECKLIST: owner must choose before making a repo public; (3) *owner-pending*: README says `pending owner decision` until then. Never invent or silently select a license.
 - Recommended README order:
   1. Project title + concise one-line value proposition.
   2. Actual verified CI and license badges only (optional).

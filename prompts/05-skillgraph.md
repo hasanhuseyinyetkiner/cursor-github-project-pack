@@ -1,5 +1,7 @@
 # CURSOR AGENT PROMPT — SKILLGRAPH
 
+> **Historical development brief (greenfield).** Prefer `prompts/antigravity/00-SYSTEM.md` + `05-skillgraph.md` and product `docs/REVIEW_AMENDMENTS.md`. Keep this file for provenance. **Git:** local OK; no push / visibility / deploy without fresh owner approval. **License:** do not create or silently choose `LICENSE`. **Stack correction:** embeddings are **optional and off by default**; deterministic baseline must work without them. SQLite local / Postgres Compose+CI.
+
 You are a senior knowledge-graph engineer, NLP scientist, full-stack product engineer and open-source maintainer. Develop **SkillGraph**, an explainable skill intelligence and internal career mobility tool. Implement a complete functioning product, not disconnected embeddings or mocked recommendation screens. Read `.cursor/rules/*.mdc` where present.
 
 ## Product concept
@@ -10,7 +12,7 @@ Users create or import a **synthetic/voluntary** skills profile, browse a graph 
 
 ## Stack
 
-- Python 3.12+, FastAPI, Pydantic v2, SQLAlchemy 2, Alembic, PostgreSQL, NetworkX, sentence-transformers, scikit-learn, pandas, pytest, Ruff.
+- Python 3.12+, FastAPI, Pydantic v2, SQLAlchemy 2, Alembic, PostgreSQL (Compose/CI) / SQLite (local), NetworkX, optional sentence-transformers (off by default), scikit-learn, pandas, pytest, Ruff.
 - React + Vite + TypeScript + Tailwind, Cytoscape.js with React integration or React Flow for interactive graph, TanStack Query, React Router, Recharts for gap analysis, Lucide.
 - Docker Compose, GitHub Actions, Vitest + Playwright.
 - Keep NetworkX service-based graph storage for MVP, persisting nodes/edges in PostgreSQL. Do not introduce Neo4j unless a concrete requirement makes it worthwhile.
@@ -64,7 +66,7 @@ Profiles may include personal data; default sample profiles are synthetic, allow
 
 ## README requirements — premium GitHub portfolio quality
 
-English headline: "Map what you know. Discover where your skills can take you." Include authentic graph screenshot near the top, interactive product tour, actual feature grid, sample profile-to-career journey, graph schema Mermaid diagram, deterministic ranking explanation, data model, metrics with real test results, Quick Start tested end to end, API curl example, docs for how to modify ontology, privacy/limitations, contribution guide and selected license. Add `docs/GITHUB_METADATA.md`: description `Explainable skill graphs, career transition paths and learning gap analysis with Python and React.`; topics `knowledge-graph`, `recommendation-system`, `nlp`, `networkx`, `career-development`, `fastapi`, `react`, `machine-learning`.
+English headline: "Map what you know. Discover where your skills can take you." Include authentic graph screenshot near the top, interactive product tour, actual feature grid, sample profile-to-career journey, graph schema Mermaid diagram, deterministic ranking explanation, data model, metrics with real test results, Quick Start tested end to end, API curl example, docs for how to modify ontology, privacy/limitations, contribution guide and license status (`pending owner decision` — never invent a LICENSE). Add `docs/GITHUB_METADATA.md`: description `Explainable skill graphs, career transition paths and learning gap analysis with Python and React.`; topics `knowledge-graph`, `recommendation-system`, `nlp`, `networkx`, `career-development`, `fastapi`, `react`, `machine-learning`.
 
 ## Phases / acceptance
 

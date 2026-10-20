@@ -8,7 +8,7 @@ alwaysApply: true
 - Act as a senior software engineer, not a one-shot code generator. Implement code in the repository, never answer only with pseudocode.
 - First inspect the actual files, commands, tool versions and environment. Never pretend to have used tools or to have run tests.
 - Prefer a complete, small, independently usable vertical slice over broad placeholders. Implement phases incrementally.
-- Standard architecture: React + Vite + TypeScript frontend; FastAPI + typed Python backend; PostgreSQL; Docker Compose. Extend only when the project requires it.
+- Standard architecture: React + Vite + TypeScript frontend; FastAPI + typed Python backend; PostgreSQL in Compose/CI; SQLite acceptable for verified local native demos; Docker Compose verified in CI when Docker is absent locally. Extend only when the project requires it.
 - Use an application/service/data-access split where helpful. Keep domain algorithms independent of API endpoints and UI components.
 - Pin dependencies with a reproducible lockfile. Verify current compatible versions before choosing them. Never fabricate package APIs.
 - Keep migrations, typed request/response DTOs, configurable settings, safe logging, /health and /ready checks, structured errors, and explicit input validation.
@@ -22,5 +22,7 @@ alwaysApply: true
 - Implement responsive and accessible UI: real information hierarchy, navigation, keyboard access, labels, loading/empty/error states and data provenance warnings.
 - Design for demonstration with one command or a short documented start process. Always support a functioning demo without paid API keys where technically reasonable.
 - Record decisions and honest limitations in `docs/ARCHITECTURE.md`, `docs/DECISIONS.md`, `docs/LIMITATIONS.md`.
-- Do not create remote repos, push commits, call paid APIs or deploy to external services without the owner's explicit authorization.
-- At the end of each phase, report: files changed, commands actually run, tests and results, blockers, remaining tasks, and next suggested phase.
+- **Git / remote defaults:** Local edits and (when asked) local conventional commits are OK. Do **not** `git push`, change repo visibility (private↔public), create remotes, force-push, deploy, or call paid APIs unless the owner **explicitly re-authorizes that action for that repo in the current chat**. Stale blanket "owner authorized push" text in older prompts is **void**.
+- **Licensing:** Do not create a `LICENSE` file or choose a license during development (see product `docs/REVIEW_AMENDMENTS.md` C-4). Public-release license is an **owner decision** — never silently pick one. README may say `License: pending owner decision`.
+- Prefer accurate claims: SQLite for verified local native paths; PostgreSQL via Compose/CI; planned features marked Roadmap, not Shipped.
+- At the end of each phase, report: files changed, commands actually run, tests and results, blockers, remaining tasks, and next suggested phase. Confirm no push / no visibility change.

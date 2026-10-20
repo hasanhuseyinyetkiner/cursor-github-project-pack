@@ -25,6 +25,7 @@ VALIDATION:
 3. If screenshot generation is feasible, run the app and use Playwright to take REAL screenshots under `docs/screenshots/` (no mockups misrepresented as product).
 4. Run relevant tests/build and clearly document what succeeded and failed.
 5. Identify unsupported README claims and rewrite or remove them.
-6. Finish with a short checklist of what the human owner still needs to supply (e.g., GitHub username, actual deployment URL, logo, chosen license).
+6. Finish with a short checklist of what the human owner still needs to supply (e.g., actual deployment URL, logo, **chosen license** — do not invent one).
+7. Confirm stack claims match code (SQLite local vs Postgres CI; optional PM4Py/embeddings; custom roster vs FullCalendar; planned ≠ shipped).
 
-Do not create/push remote repositories, claim security/compliance certification or invent a live demo URL.
+Do not create/push remote repositories, change visibility, overwrite the live profile README, claim security/compliance certification or invent a live demo URL.

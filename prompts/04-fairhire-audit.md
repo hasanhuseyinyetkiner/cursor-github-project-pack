@@ -1,5 +1,7 @@
 # CURSOR AGENT PROMPT — FAIRHIRE AUDIT
 
+> **Historical development brief (greenfield).** Prefer `prompts/antigravity/00-SYSTEM.md` + `04-fairhire-audit.md` and product `docs/REVIEW_AMENDMENTS.md`. Keep this file for provenance. **Git:** local OK; no push / visibility / deploy without fresh owner approval. **License:** do not create or silently choose `LICENSE`. Mark planned UI features as roadmap. SQLite local / Postgres Compose+CI.
+
 Act as a senior responsible-ML engineer, statistical methodologist, Python API engineer, and open-source maintainer. Build **FairHire Audit**, an evidence-based model performance and group-disparity auditing web application. Implement real code, tests, report exports and a polished public GitHub README. Read `.cursor/rules/*.mdc` if present. This is an **audit tool**, not a hiring decision engine.
 
 ## Product value
@@ -60,7 +62,7 @@ Sensitive audit data must be access-controlled, minimally retained and deletable
 
 ## GitHub-quality README
 
-English hero: "Audit the model. Understand the trade-offs. Show your evidence." Demonstrate a real disparity visualization screenshot, clear use case, reproducible synthetic dataset, Mermaid metrics pipeline, detailed mathematical definitions, fully verified Quick Start, report screenshots, actually measured test status, sample-size caveats, privacy safeguards, limitations, contributor guide and license. The README must compare what this app measures vs what it **cannot** conclude. Add `docs/GITHUB_METADATA.md`: description `Transparent audits for hiring ML models: group metrics, confidence intervals and threshold trade-offs.`; topics `responsible-ai`, `fairness`, `fairlearn`, `model-audit`, `machine-learning`, `statistics`, `fastapi`, `react`.
+English hero: "Audit the model. Understand the trade-offs. Show your evidence." Demonstrate a real disparity visualization screenshot, clear use case, reproducible synthetic dataset, Mermaid metrics pipeline, detailed mathematical definitions, fully verified Quick Start, report screenshots, actually measured test status, sample-size caveats, privacy safeguards, limitations, contributor guide and license status (`pending owner decision` — never invent a LICENSE). The README must compare what this app measures vs what it **cannot** conclude. Add `docs/GITHUB_METADATA.md`: description `Transparent audits for hiring ML models: group metrics, confidence intervals and threshold trade-offs.`; topics `responsible-ai`, `fairness`, `fairlearn`, `model-audit`, `machine-learning`, `statistics`, `fastapi`, `react`.
 
 ## Phases / definition of done
 

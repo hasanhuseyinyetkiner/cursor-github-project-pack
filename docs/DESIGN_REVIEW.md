@@ -1,5 +1,8 @@
 # Tasarım İncelemesi — Üretime Geçiş Engelleyici Bakış
 
+> **Document role:** This file is a **historical pre-implementation design audit** of the pack prompts/rules (findings below).  
+> For “what was fixed in product repos / what remains,” see **[CURRENT VERIFICATION STATUS](#current-verification-status)** at the bottom and [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md). Do not delete or rewrite the original findings; mark them resolved/superseded in the status table instead.
+
 **Kapsam:** `prompts/01..05`, `common/.cursor/rules/*.mdc`, `START_HERE.md`, `templates/*`.
 **Tarih:** 2026-10-20. **Yöntem:** Spec metni satır numarasıyla alıntılandı; dış kütüphane iddiaları birincil kaynaktan (PyPI, GitHub Security Advisories, resmi dokümantasyon) doğrulandı; ortam iddiaları bu makinede komut çalıştırılarak doğrulandı. Kanıtı olmayan hiçbir bulgu listeye alınmadı.
 
@@ -179,3 +182,44 @@
 - HR kararlarının otomatikleştirilmesinin açıkça yasaklanması.
 
 Bu bulguların bağlayıcı karşılıkları her ürün reposunda `docs/REVIEW_AMENDMENTS.md` dosyasına işlenmiştir; `docs/PRODUCT_SPEC.md` en üstte bu dosyaya yönlendirir ve çelişkide amendments geçerlidir.
+
+---
+
+## CURRENT VERIFICATION STATUS
+
+**Updated:** 2026-10-20 (pack audit). Status labels:
+
+| Label | Meaning |
+| --- | --- |
+| **resolved** | Amendment + product evidence addresses the finding for MVP |
+| **unresolved** | Still open / owner or product work remaining |
+| **unverified** | Claimed in amendments/README but not re-proven in this pack pass |
+| **superseded** | Original finding no longer applies as written (approach changed) |
+
+| ID | Status | Notes (pack-level; re-check product repo before public release) |
+| --- | --- | --- |
+| C-1 | resolved | Dual path: native+SQLite local; Compose/Postgres in CI — documented in amendments + product READMEs |
+| C-2 | unverified | Amendments require loopback/demo band; confirm each repo bind defaults before public host |
+| C-3 | unverified | Threadpool/reaper patterns specified; confirm per-repo jobs + `/health` tests |
+| C-4 | resolved *(pack)* / unresolved *(owner)* | Pack prompts/rules normalized: no blanket push; no silent LICENSE. **Owner still must choose license + approve push/visibility** |
+| C-5 | unverified | CPU torch index / optional embeddings patterns exist in products; CI image size not re-measured here |
+| C-6 | resolved | Antigravity prompts assign distinct port ranges (81xx/51xx/54xx) |
+| HR-1 | unverified | PG-as-SoT + post-filter pattern in amendments; dual-write race tests product-local |
+| HR-2 | unverified | DB-backed / versioned BM25 intended; multi-worker parity product-local |
+| HR-3 | unverified | pypdf pin + sandbox called for; CVE PoC tests product-local |
+| HR-4 | unverified | Citation snapshot / soft-delete pattern in amendments |
+| HR-5 | unverified | Offline/degraded modes documented in product README claims |
+| HPM-1 | resolved *(architecture)* / unresolved *(license file)* | Core pandas; PM4Py optional extra — **repo LICENSE still owner-pending** |
+| HPM-2 | unverified | `canonical_order` required; PM4Py parity tests skip when absent |
+| HPM-3 | unverified | DST policy in amendments/README |
+| WFO-1 | unverified | Reproducible CP-SAT mode + 10× hash tests claimed in product README |
+| WFO-2 | superseded → resolved | **Shipped custom roster grid**; FullCalendar Premium not used; CI assert pattern documented |
+| WFO-3 | unverified | UTC TypeDecorator required; dialect round-trip product-local |
+| FHA-1 | unverified | Score-gate semantics in amendments |
+| FHA-2 | unverified | Cascade delete / retention claimed shipped in FairHire README |
+| FHA-3 | unverified | pyarrow for Parquet claimed |
+| SKG-1 | unverified | `graph_version` cache invalidation in amendments |
+| Pack git auth contradiction | resolved | `00-SYSTEM` and templates: local OK; **no push / no visibility / no deploy** by default |
+| Pack stack drift (PM4Py/FullCalendar/embeddings/Postgres-only) | resolved | See [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md) + root README table |
+
+**Still owner blockers for public GitHub:** license choice per repo; explicit push approval; private→public approval; secret scan; Actions review; profile Featured status labels; no agent push to `hasanhuseyinyetkiner/hasanhuseyinyetkiner`.

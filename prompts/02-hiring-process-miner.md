@@ -1,5 +1,7 @@
 # CURSOR AGENT PROMPT — HIRING PROCESS MINER
 
+> **Historical development brief (greenfield).** Prefer `prompts/antigravity/00-SYSTEM.md` + `02-hiring-process-miner.md` and product `docs/REVIEW_AMENDMENTS.md` for current work. Keep this file for provenance. **Git:** local OK; no push / visibility / deploy without fresh owner approval. **License:** do not create or silently choose `LICENSE`. **Stack correction vs older text:** core analytics = **pandas/NumPy**; PM4Py is an **optional AGPL extra**, not a hard MVP dependency. SQLite local / Postgres Compose+CI.
+
 You are a senior process-mining researcher, data engineer, Python backend engineer and product-minded frontend developer. Build **Hiring Process Miner**, a complete open-source HR event-log analytics application in this repository. Write working code and test it; don't stop at design documents. Read `.cursor/rules/*.mdc` where present. Favor complete vertical slices and real demo examples.
 
 ## Product concept
@@ -10,10 +12,10 @@ A hiring operations team uploads an **anonymized event log** and receives a disc
 
 ## Technology
 
-- Python 3.12+, FastAPI, PM4Py, pandas, NumPy, Pydantic v2, SQLAlchemy 2 + Alembic, PostgreSQL, pytest, Ruff.
+- Python 3.12+, FastAPI, **pandas, NumPy** (required), optional `pm4py` extra for advanced conformance only, Pydantic v2, SQLAlchemy 2 + Alembic, PostgreSQL (Compose/CI) / SQLite (local), pytest, Ruff.
 - React + Vite + TypeScript + Tailwind, React Flow or Cytoscape.js for process maps, Recharts/Plotly for charts, TanStack Query, React Router, Lucide.
 - Docker Compose; GitHub Actions; Vitest + Playwright.
-- Use a library-supported PM4Py release and documented API calls; don't fabricate process-mining package methods.
+- If the optional PM4Py extra is used, call only documented APIs; core MVP must pass without importing pm4py.
 
 ## Inputs and data contracts
 
@@ -31,7 +33,7 @@ A hiring operations team uploads an **anonymized event log** and receives a disc
 4. Performance: case cycle time, per-stage dwell time, median/p90, active-case aging, wait vs processing time where timestamps permit distinction.
 5. Funnel: drop-off by stage, distinct-case counting, explicit definition of denominator.
 6. Rework: repeat loops, revisits and repeated steps; show examples using anonymous IDs.
-7. Conformance: compare discovered traces against an editable allowed-flow model or a preconfigured reference process, using PM4Py mechanisms that really exist.
+7. Conformance: compare discovered traces against an editable allowed-flow / allowed-transition model without requiring PM4Py; optional advanced token-replay/alignment only behind the AGPL optional extra.
 8. Filters: time range, source channel, job family, outcome, completed/ongoing; recompute graph and KPIs consistently.
 9. Export: PNG/SVG for graph (where implemented), CSV summary and HTML report with dataset assumptions.
 10. Insight cards: transparent rules such as "Interview Scheduled → Interview Completed has the highest median wait among steps with >= N observations"; always show numerator, sample size and methodology. Never assert a causal root cause from event logs alone.
@@ -66,12 +68,12 @@ Unit tests for invalid schemas/timestamps, duplicate semantics, stage durations,
 
 ## GitHub README requirements
 
-An outstanding English README with headline "Understand how hiring actually happens — from event logs to explainable insights." Include actual product screenshot, clear problem statement, example small anonymized CSV table, dashboard tour, Mermaid import-to-graph pipeline, exact Quick Start commands, real CLI/API examples, detailed metric definitions and data limitations, evaluation/test examples, security/privacy, supported input formats, architecture, contribution guide and selected license. **No made-up cycle-time improvements, client stories, deployment URLs, stars or coverage.** Include `docs/GITHUB_METADATA.md` with About description `Open-source process mining for hiring funnels, bottlenecks, variants and conformance analysis.` and topics `process-mining`, `pm4py`, `data-analytics`, `fastapi`, `react`, `hr-tech`, `event-logs`, `python`.
+An outstanding English README with headline "Understand how hiring actually happens — from event logs to explainable insights." Include actual product screenshot, clear problem statement, example small anonymized CSV table, dashboard tour, Mermaid import-to-graph pipeline, exact Quick Start commands, real CLI/API examples, detailed metric definitions and data limitations, evaluation/test examples, security/privacy, supported input formats, architecture, contribution guide and license status (`pending owner decision` — never invent a LICENSE). **No made-up cycle-time improvements, client stories, deployment URLs, stars or coverage.** Include `docs/GITHUB_METADATA.md` with About description `Open-source process mining for hiring funnels, bottlenecks, variants and conformance analysis.` and topics `process-mining`, `pm4py`, `data-analytics`, `fastapi`, `react`, `hr-tech`, `event-logs`, `python`.
 
 ## Phases and acceptance
 
 Phase 1: working app shell, CSV import/validation, SQL storage and deterministic seed.
-Phase 2: PM4Py process discovery + independently verified KPIs + graph UI.
+Phase 2: pandas process discovery + independently verified KPIs + graph UI (optional PM4Py adapter only if extra installed).
 Phase 3: filters, variants, rework, conformance, export, comprehensive tests.
 Phase 4: UX polish, real screenshots, architecture/evaluation docs, CI, clean Docker install and professional README.
 
