@@ -1,86 +1,126 @@
-<!-- This is a TEMPLATE. Replace placeholders with VERIFIED, project-specific facts. Remove unused sections before publishing. -->
+<!--
+TEMPLATE — replace every placeholder with VERIFIED, project-specific facts and delete unused sections.
 
-# PROJECT_NAME
+First-impression rules (researched 2026-10, GitHub Docs + current README practice):
+- The README renders BELOW the file list: the hero must land in the first screenful after that.
+- ONE focal asset above the fold: a light/dark <picture> banner OR a real screenshot. Never two.
+- Badges are status, not decoration: 3–5 max and only real ones (CI, license, release).
+- Dot-separated nav row under the pitch so skimmers can jump.
+- Mermaid for structure (re-themes with GitHub, diffable). Theme it with %%{init}%%.
+- GitHub alerts (> [!NOTE] etc.) at most once per major section. <details> for reference material.
+- Relative paths for repo assets (they update on push; external images are camo-cached).
+- Alt text on every image describes what it shows. No running text rendered as image.
+- Never: fake screenshots, invented numbers, dead links, "production-ready"/"bias-free" claims.
+-->
 
-> **ONE_SENTENCE_VALUE_PROPOSITION**
+<a id="readme-top"></a>
 
-<!-- Only after CI and license actually exist: add their REAL badges here. -->
+<div align="center">
 
-<!-- Add an ACTUAL product screenshot if it exists: -->
-<!-- ![Working application dashboard](docs/screenshots/dashboard.png) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
+  <img alt="PROJECT_NAME — ONE_LINE_PITCH" src="docs/assets/banner-light.svg" width="100%">
+</picture>
 
-## The problem
+<!-- Real badges only, e.g. CI once .github/workflows/ci.yml exists and has run:
+[![CI](https://github.com/USERNAME/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/REPO/actions/workflows/ci.yml) -->
 
-Write 2–3 sentences explaining the real problem, target users, and why this solution is different from a tutorial app.
+**TWO_SENTENCE_PITCH — what it does and why it is different.**
 
-## Highlights
+[Quick start](#quick-start) · [How it works](#how-it-works) · [Demo](#60-second-demo) · [Engineering](#engineering-decisions) · [Limitations](#security-privacy-and-limitations)
 
-| Feature | What it does | Status |
+</div>
+
+<br>
+
+<!-- Real screenshot captured from the running app (light/dark pair if both exist). -->
+<p align="center">
+  <img alt="DESCRIBE WHAT THE SCREEN SHOWS" src="docs/screenshots/HERO.png" width="100%">
+</p>
+
+## Why it exists
+
+**Bold one-line problem.** Two sentences on who has this problem and what they do today. Then what this project does differently — concretely.
+
+## What you get
+
+| | Capability | Status |
 | --- | --- | --- |
-| Verified feature 1 | Specific capability | Implemented |
-| Verified feature 2 | Specific capability | Implemented |
+| 🔎 | **Verified feature** — one-line takeaway | Shipped |
+| 🧭 | **Verified feature** — one-line takeaway | Shipped |
+| 🧪 | **Planned feature** — one-line takeaway | Roadmap |
 
 ## How it works
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#ACCENT_TINT", "primaryBorderColor": "#ACCENT", "lineColor": "#ACCENT", "fontFamily": "Inter, Segoe UI, sans-serif"}}}%%
 flowchart LR
-  U[User] --> W[React web app]
-  W --> A[FastAPI]
-  A --> D[(PostgreSQL)]
+  U[Browser · React] -->|REST| A[FastAPI]
   A --> E[Domain engine]
+  A --> D[(PostgreSQL)]
 ```
 
-Replace this high-level diagram with the ACTUAL architecture, including the correct backend and specialized engine.
+One paragraph walking through the diagram. Link to `docs/ARCHITECTURE.md`.
 
 ## Quick start
 
-**Prerequisites:** Docker Desktop / Docker Engine with Compose; list any other prerequisites.
+> [!NOTE]
+> State exactly which path was verified where (e.g. native path verified locally; Docker Compose verified in CI).
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd REPOSITORY
-cp .env.example .env
-docker compose up --build
+# exact, tested commands only
 ```
 
-Only keep these commands if they work. Explain platform-specific alternatives and where to open the app and API docs.
+| Service | URL |
+| --- | --- |
+| Web app | http://localhost:PORT |
+| API docs (OpenAPI) | http://localhost:PORT/docs |
 
 ## 60-second demo
 
-1. Start the application.
-2. Load the included synthetic sample data using the actual command/button.
-3. Perform the product's defining workflow.
-4. Verify the result and understand what it does **not** prove.
+1. Step with the real button/command.
+2. Step.
+3. What you should see — and what it does **not** prove.
 
-## API example
+<details>
+<summary><b>API example</b></summary>
 
-Provide a real `curl` example from the implemented OpenAPI specification, including expected response shape. Remove this section if not exposed.
+```bash
+curl -s http://localhost:PORT/api/... | jq
+```
+
+</details>
 
 ## Engineering decisions
 
-Discuss nontrivial technology choices, trade-offs, algorithm design, and alternatives. Link to `docs/ARCHITECTURE.md`.
+Non-trivial choices and trade-offs, each in 2–3 sentences with a link to `docs/DECISIONS.md`.
 
-## Evaluation and testing
+## Testing
 
-List exact test commands, the evaluation dataset's origin and size, key metrics and definitions. Never invent a benchmark, accuracy, coverage, performance number or usage statistic.
+Exact commands and the latest verified result summary (copy real output; no invented coverage).
 
-## Security, privacy, and limitations
+## Security, privacy and limitations
 
-Explain sample data policy, PII handling, scope of claims, restrictions on consequential HR decisions, and status of any auth controls. Link to `SECURITY.md` and `docs/LIMITATIONS.md`.
+> [!IMPORTANT]
+> Synthetic data only. Not legal/compliance advice. No automated employment decisions.
 
-## Project structure
+Link `SECURITY.md`, `docs/LIMITATIONS.md`.
 
-Provide an accurate short file tree.
+<details>
+<summary><b>Project structure</b></summary>
+
+```text
+accurate tree
+```
+
+</details>
 
 ## Roadmap
 
-- [ ] Planned, not implemented capability 1
-- [ ] Planned, not implemented capability 2
+- [ ] Planned capability
 
-## Contributing
+## Contributing · License
 
-Link to `CONTRIBUTING.md`, with steps to run tests before opening a PR.
+See `CONTRIBUTING.md`. License: state the actual license, or "pending owner decision".
 
-## License
-
-State the actual license after adding LICENSE; otherwise mark license selection pending. Do not misrepresent third-party licenses.
+<p align="right"><a href="#readme-top">↑ back to top</a></p>
