@@ -76,7 +76,10 @@ Read [`docs/DESIGN_REVIEW.md`](docs/DESIGN_REVIEW.md) (historical findings + **C
 | [`prompts/`](prompts/) | Full English product prompts (greenfield / historical) |
 | [`prompts/antigravity/`](prompts/antigravity/) | System directive + audit/implement prompts for scaffolded repos |
 | [`common/.cursor/rules/`](common/.cursor/rules/) | Engineering + GitHub documentation Project Rules |
-| [`templates/`](templates/) | README, profile, continue, review, release, and publish guides |
+| [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENTATION_STATUS.md) | Shipped vs planned snapshot for sibling products (re-verify before publish) |
+| [`docs/DESIGN_REVIEW.md`](docs/DESIGN_REVIEW.md) | Historical design audit + CURRENT VERIFICATION STATUS |
+| [`docs/LICENSING.md`](docs/LICENSING.md) | Dev constraint vs release requirement vs owner-pending |
+| [`templates/`](templates/) | README/profile/publish guides + reusable review, evidence, ADR, security, and triage blanks |
 
 ---
 

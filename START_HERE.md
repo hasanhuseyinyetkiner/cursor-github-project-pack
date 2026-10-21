@@ -51,7 +51,9 @@ Güncel shipped/planned özeti: [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENT
 - `templates/README_REVIEW_PROMPT.md`: README audit komutu.
 - `templates/CURSOR_CONTINUE_PROMPT.md`: Devam komutu.
 - `templates/RELEASE_CHECKLIST.md`: Public öncesi kontroller (lisans = owner kararı).
+- `templates/RELEASE_READINESS_TEMPLATE.md`: PASS/FAIL/SKIP doğrulama matrisi (boş şablon).
 - `templates/GITHUB_PUBLISH.md`: **Mevcut** remote'lar için yayın rehberi.
+- `templates/ENGINEERING_REVIEW_CHECKLIST.md` · `TEST_EVIDENCE_TEMPLATE.md` · `ADR_TEMPLATE.md` · `PERFORMANCE_EXPERIMENT_TEMPLATE.md` · `SECURITY_CHECKLIST.md` · `ANTI_SLOP_CHECKLIST.md` · `RECRUITER_CASE_STUDY_TEMPLATE.md` · `CI_FAILURE_TRIAGE.md`: Tekrar kullanılabilir boş şablonlar; ürünlere uygulandı iddiası yok.
 - `docs/DESIGN_REVIEW.md`: Tarihsel audit + CURRENT VERIFICATION STATUS.
 - `docs/IMPLEMENTATION_STATUS.md`: Shipped vs outdated pack claims.
 - `docs/LICENSING.md`: Geliştirme kısıtı / release ihtiyacı / owner-pending ayrımı.
