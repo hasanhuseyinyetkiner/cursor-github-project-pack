@@ -4,7 +4,7 @@
 
 This repository is a **meta pack**. Each product lives in its own GitHub repository. Clone this pack, follow the workflow below, and drive implementation in those sibling repos. Prefer [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENTATION_STATUS.md) and each product README for **current** shipped facts; treat greenfield `prompts/01–05` and product `PRODUCT_SPEC.md` as **historical** development briefs.
 
-[Start here](START_HERE.md) · [Antigravity prompts](prompts/antigravity/) · [Design review](docs/DESIGN_REVIEW.md) · [Implementation status](docs/IMPLEMENTATION_STATUS.md) · [Licensing layers](docs/LICENSING.md) · [Templates](templates/)
+[Start here](START_HERE.md) · [Antigravity prompts](prompts/antigravity/) · [Templates](templates/) · [LICENSE](LICENSE)
 
 ---
 
@@ -77,9 +77,6 @@ Read [`docs/DESIGN_REVIEW.md`](docs/DESIGN_REVIEW.md) (historical findings + **C
 | [`prompts/antigravity/`](prompts/antigravity/) | System directive + audit/implement prompts for scaffolded repos |
 | [`common/.cursor/rules/`](common/.cursor/rules/) | Engineering + GitHub documentation Project Rules |
 | [`templates/`](templates/) | README, profile, continue, review, release, and publish guides |
-| [`docs/DESIGN_REVIEW.md`](docs/DESIGN_REVIEW.md) | Historical design review + current verification status |
-| [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENTATION_STATUS.md) | Shipped vs planned snapshot vs outdated claims |
-| [`docs/LICENSING.md`](docs/LICENSING.md) | Dev constraint vs release requirement vs owner-pending |
 
 ---
 
