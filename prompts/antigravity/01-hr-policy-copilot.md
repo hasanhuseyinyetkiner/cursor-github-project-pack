@@ -2,7 +2,7 @@
 
 > **Scope:** Local edit/verify only. Apply `00-SYSTEM.md`. No push, no visibility change, no deploy, no LICENSE creation.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\hr-portfolio\hr-policy-copilot`  
+Repo: `../hr-policy-copilot`  
 Ports: API **8101**, web **5101**, compose postgres **5401**, qdrant **6301**  
 Read first: `docs/REVIEW_AMENDMENTS.md` (binding), then `docs/PRODUCT_SPEC.md` (**historical** development brief), `.cursor/rules/*.mdc`, README shipped/planned table.
 

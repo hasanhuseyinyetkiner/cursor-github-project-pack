@@ -2,7 +2,7 @@
 
 > **Scope:** Local edit/verify only. Apply `00-SYSTEM.md`. No push, no visibility change, no deploy, no LICENSE creation.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\hr-portfolio\fairhire-audit`  
+Repo: `../fairhire-audit`  
 Ports: API **8104**, web **5104**, compose postgres **5404**  
 Read first: `docs/REVIEW_AMENDMENTS.md` (FHA-1 score gate, FHA-2 cascade delete, FHA-3 pyarrow if Parquet), then `docs/PRODUCT_SPEC.md` (**historical**), README shipped vs planned table.
 

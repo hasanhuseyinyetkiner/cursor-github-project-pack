@@ -2,7 +2,7 @@
 
 > **Scope:** Local meta-pack maintenance only. **No** `git push`, **no** visibility change, **no** deploy, **no** remote profile overwrite, **no** silent LICENSE choice.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\cursor-github-project-pack`
+Repo: `.`
 
 1. Verify prompts `01`–`05`, `common/.cursor/rules/`, templates, `docs/DESIGN_REVIEW.md`, `docs/IMPLEMENTATION_STATUS.md`, `prompts/antigravity/*` are complete and relative links work.
 2. Keep root `README.md` as an **engineering workflow / prompt pack** (not product source): accurate stack vs shipped apps, Antigravity usage, design-review pointer, honest scope.

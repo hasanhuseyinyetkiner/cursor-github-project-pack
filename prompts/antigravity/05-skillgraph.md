@@ -2,7 +2,7 @@
 
 > **Scope:** Local edit/verify only. Apply `00-SYSTEM.md`. No push, no visibility change, no deploy, no LICENSE creation.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\hr-portfolio\skillgraph`  
+Repo: `../skillgraph`  
 Ports: API **8105**, web **5105**, compose postgres **5405**  
 Read first: `docs/REVIEW_AMENDMENTS.md` (SKG-1 graph_version; **embeddings optional / off by default**), then `docs/PRODUCT_SPEC.md` (**historical**), README shipped table.
 

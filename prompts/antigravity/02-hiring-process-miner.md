@@ -2,7 +2,7 @@
 
 > **Scope:** Local edit/verify only. Apply `00-SYSTEM.md`. No push, no visibility change, no deploy, no LICENSE creation.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\hr-portfolio\hiring-process-miner`  
+Repo: `../hiring-process-miner`  
 Ports: API **8102**, web **5102**, compose postgres **5402**  
 Read first: `docs/REVIEW_AMENDMENTS.md` (**HPM-1: PM4Py is AGPL — core analytics must work without pm4py; optional extra only**), then `docs/PRODUCT_SPEC.md` (**historical**), README shipped table.
 

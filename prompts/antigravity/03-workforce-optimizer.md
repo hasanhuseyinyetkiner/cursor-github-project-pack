@@ -2,7 +2,7 @@
 
 > **Scope:** Local edit/verify only. Apply `00-SYSTEM.md`. No push, no visibility change, no deploy, no LICENSE creation.
 
-Repo: `C:\Users\Hasan Hsey\Desktop\hr-portfolio\workforce-optimizer`  
+Repo: `../workforce-optimizer`  
 Ports: API **8103**, web **5103**, compose postgres **5403**  
 Read first: `docs/REVIEW_AMENDMENTS.md` (WFO-1 reproducible CP-SAT, WFO-2 MIT-safe roster, WFO-3 UTC TypeDecorator), then `docs/PRODUCT_SPEC.md` (**historical**), README shipped table.
 
